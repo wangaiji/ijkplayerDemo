@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@android:color/black">
+
+    <com.example.ijkplayerdemo.media.IjkVideoView
+        android:id="@+id/ijkvideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.example.ijkplayerdemo.media.IjkVideoView>
+
+    <master.flame.danmaku.ui.widget.DanmakuView
+        android:id="@+id/video_danmaku"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ProgressBar
+        android:id="@+id/load_pb"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:indeterminateOnly="true"
+        android:indeterminateBehavior="repeat"
+        android:visibility="gone"/>
+
+
+    <ImageView
+        android:id="@+id/player_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_playbackground" />
+
+    <include layout="@layout/layout_top_bar"/>
+
+    <include layout="@layout/layout_bottom_bar"/>
+
+    <ImageView
+        android:id="@+id/play_start"
+        android:layout_width="56dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_play_start" />
+
+    <TextView
+        android:id="@+id/reload_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="点击重试"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:drawableTop="@mipmap/ic_reload"
+        android:visibility="gone"/>
+
+    <include layout="@layout/layout_touch_gesture"/>
+
+    <ImageView
+        android:id="@+id/player_lock"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:padding="10dp"
+        android:background="@drawable/shape_lock_bg"
+        android:src="@drawable/sel_player_lock"
+        android:visibility="gone"/>
+
+
+    <com.example.ijkplayerdemo.widgets.KeyboardLayout
+        android:id="@+id/keyboard_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>
